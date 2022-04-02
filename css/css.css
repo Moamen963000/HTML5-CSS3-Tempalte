@@ -1,0 +1,408 @@
+/* COMMEN STYLE */
+.contaner{
+    width: 80%;
+    margin: auto;
+}
+.section-title{
+    text-align: center;
+    padding: 50px 0px 30px 0px;
+}
+.title{
+    font-size: 30px;
+    padding-bottom: 10px;
+    margin: auto;
+}
+.line{
+    display: block;
+    margin: auto;
+    width: 100px;
+    height: 2px;
+    background-color: #7b5244;
+    transition: 0.5s;
+    
+}
+.section-title:hover .line{
+    transform: scale(1.7 ,1);
+}
+.clear{
+    clear: both;
+}
+/* GENERAL STYLE */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'PT Sans', sans-serif;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/* SECTIONS */
+
+/*------------------------------------------------ Main Section --------------------------------------------------*/
+.main-banner{
+    width: 100%;
+}
+/*----------------------------------------------- Header Section -------------------------------------------------*/
+header{
+    margin: 40px 0px;
+}
+.header-content{
+    display: flex;
+}
+.header-content img{
+    flex: 1;
+    max-width: 160px;
+}
+.header-content nav{
+    flex: 3;
+    text-align: center;
+}
+.header-content nav ul .nav-item {
+    display: block;
+    color: #7b5244;
+    padding: 10px 15px;
+    font-weight: bold;
+    position: relative;
+}
+.header-content nav ul li .nav-item::before{
+    content: "";
+    position: absolute;
+    border-width: 0px 2px;
+    border-color: #7b5244;
+    border-style: solid;
+    height: 100%;
+    width: 99%;
+    top: 0;
+    left: 0;
+    transform: scale3d(1,0,1);
+    transition: 0.4s;
+}
+.header-content nav ul li .nav-item:hover:before{
+    transform: scale3d(1,1,1);
+}
+.header-content nav ul li .nav-item::after{
+    content: "";
+    position: absolute;
+    border-width: 2px 0px;
+    border-color: #7b5244;
+    border-style: solid;
+    height: 91%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transform: scale3d(0,1,1);
+    transition: 0.4s;
+}
+.header-content nav ul li .nav-item:hover::after{
+    transform: scale3d(1,1,1);
+    transition-delay: 0.2s;
+}
+.header-content .your-bag{
+    flex: 1;
+    text-align: right;
+}
+.header-content .your-bag li i{
+    font-size: 26px;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+.header-content .your-bag li:last-child i{
+    position: relative;
+}
+.header-content .your-bag li:last-child i::after{
+    content: "0";
+    position: absolute;
+    width: 13px;
+    height: 15px;
+    padding: 2px 0px 0px 0px;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 45%;
+    background-color: #7b5244;
+    color: white;
+    bottom: 0;
+    right: -10;  
+}
+.header-content ul li{
+    display: inline-block;
+}
+.header-content nav ul li{
+    position: relative;
+}
+.dropdowen{
+    position: absolute;
+    width: 400px;
+    border: 1px solid #7b5244;
+    background-color: white;
+    color: #7b5244;
+    line-height: 1.7;
+    padding-bottom: 10px;
+    opacity: 0;
+    visibility: hidden;
+    margin-top: 10px;
+}
+nav ul .drop:hover .dropdowen{
+    opacity: 1;
+    visibility: visible;
+}
+.dropdowen ul{
+    display: table-cell;
+}
+.activ{
+    display: block;
+    margin: 10px  20px 10px -17px;
+    text-align: left;
+    border-bottom: 1px dotted #7b5244;
+}
+/* --------------------------------------------------  CATEGORY SECTION  ------------------------------------- */  
+.item{
+    display: block;
+    float: left;
+    width: 24%;
+    margin: 0px 5px;
+}
+.item-typ{
+    color: rgb(153, 153, 150);
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.img1{
+    width: 100%;
+} 
+.icon1{
+    position: relative;
+    bottom: 25px;
+    left: 220px;
+    font-size: 22px;
+    background-color: brown;
+    color: white;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+}
+.item:hover .icon1{
+    opacity: 1;
+    visibility: visible;
+}
+/* ----------------------------------------------- DESCRIBTIOIN SECTION ------------------------------------------ */
+.desc-content{
+    display: flex;
+    justify-content: space-between; 
+}
+.desc-item{
+    flex: 2;
+    background-color: rgba(247,244,239);
+    height: 275px;
+}
+.top{
+    margin: 10px 10px 5px 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    overflow: hidden;
+}
+.icons{
+    color: rgba(121,84,65,255) ;
+    font-size: 45px;
+    display: inline-block;
+    float: left;
+    margin-right: 5px;
+}
+.ficons{
+    margin-top: 5px;
+    float: left;
+}
+.text{
+    text-transform: capitalize;
+    font-size: 25px;
+}
+.item-paragragh{
+    margin-top: 5px;
+    font-size: 14px;
+    padding: 20px 10px;
+    line-height: 1.5;
+}
+.bullt{
+    text-align: right;
+    margin: 30px 10px 10px 10px;
+}
+.thread{
+    display: inline-block;
+    width: 50px;
+    height: 2px;
+    background-color: #7b5244;
+    margin-right: 10px;
+}
+.mg{
+    margin: 0px 20px;
+}
+.desc-item2{
+    background-image: url(../images/95efce6b-103a-4964-9fc3-79b5f1ed7b65.jpg);
+    background-size: cover;
+    transition: 0.5s;
+    flex: 1;
+}
+.discount{
+    margin: 20px 20px 0px 15px;
+    color: #7b5244;
+    font-size: 17px;
+    flex: 2;
+}
+.designing{
+    margin: 0px 15px;
+    text-transform: capitalize;
+    font-size: 19px;
+    flex: 1;
+}
+.desc-item3{
+    background-image: url(../images/cms-banner-2.jpg);
+    background-size:cover;
+    flex: 1;
+    transition: 0.5s;
+}
+.hov:hover{
+    transform: scale(1.1);
+}
+/*-------------------------------------------------- DELIVER SECTION ----------------------------------------------*/
+.delivery-section{
+    display: flex;
+    margin-top: 40px;
+}
+.delivery{
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid brown;
+}
+.delivery:last-child{
+    border: none;
+}
+.delivery-title1{
+    font-size: 18px;
+}
+.delivery-title2{
+    color: gray;
+}
+.delivery-img{
+    background-image: url(../images/service-icon.png);
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center 0px;
+    transition: 0.5s;
+}
+.delivery:hover .icon22{
+    background-position: center -92px;
+}
+.icon23{
+    background-position: center -185px;
+}
+.delivery:hover .icon23{
+    background-position: center -275px;
+}
+.icon24{
+    background-position: center -368px;
+}
+.delivery:hover .icon24{
+    background-position: center -455px;
+}
+.icon25{
+    background-position: center -548px;
+}
+.delivery:hover .icon25{
+    background-position: center -639px;
+}
+.icon26{
+    background-position: center -735px;
+}
+.delivery:hover .icon26{
+    background-position: center -827px;
+}
+hr{
+    margin: 60px;
+    width: 100%;
+    margin-left: auto;
+}
+/*------------------------------------------------- PRODUCT SECTION ----------------------------------------------- */
+.nav{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 25px;
+}
+.nav li{
+    display: inline-block;
+    padding: 10px 20px;
+
+}
+.nav li a{
+    display: block;
+    color: rgb(7, 0, 0);
+}
+.product{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
+}
+.product-item{
+    position: relative;
+}
+.product-overly{
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: 0.2s;
+}
+.product-item:hover .product-overly{
+    opacity: 0.9;
+    visibility: visible;
+    transform: scaleX(1);
+}
+.icons4{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.icons4 li{
+    display: inline-block;
+}
+.icon2{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 22px;
+    text-align: center;
+    background-color: rgb(85, 45, 7);
+    color: white;
+    opacity: 0.9;
+}
+.stars1{
+    font-size: 13px;
+    color: rgb(212, 212, 209);
+}
+.stars{
+    margin-top: 10px;
+    font-size: 13px;
+    color: yellow;
+}
+.expla{
+    margin-top: 5px;
+    display: block;
+    text-transform: capitalize;
+}
+.price{
+    display: block;
+    margin: 5px 0px 20px 0px;
+    font-weight: bold;
+}
